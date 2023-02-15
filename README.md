@@ -8,7 +8,7 @@ Nextflow should be installed. The detail of installation can be found in https:/
 
 Python3 is needed.
 
-Singularity/apptainer is also needed. The detail of installation can be found in https://apptainer.org/
+Singularity/Apptainer is also needed. The detail of installation can be found in https://apptainer.org/
 
 In addition, the below docker container images are needed in the pipeline. These images should be downloaded to the directory /apps/staphb-toolkit/containers/ in your local computer. You can find them from StaPH-B/docker-builds (https://github.com/StaPH-B/docker-builds).
 
