@@ -15,6 +15,7 @@ Singularity/Apptainer is also needed. The detail of installation can be found in
 2. put your primer information file in bed format into directory /primers.
 3. open file "parames.yaml", set the parameters. 
 4. get into the top directory of the pipeline and then run command below:
+
    If you use SLURM, run 
    ```bash
    sbatch mycoplasma_target.sh
