@@ -14,7 +14,9 @@ Singularity/Apptainer is also needed. The detail of installation can be found in
 1. put your data files into directory /fastqs. Your data file's name should look like "JBS22002292_1.fastq.gz", "JBS22002292_2.fastq.gz"
 2. put your primer information file in bed format into directory /primers.
 2. open file "parames.yaml", set the parameters. 
-3. get into the top directory of the pipeline, run "sbatch mycoplasma_target.sh"
+3. get into the top directory of the pipeline and then run command below:
+  1) if you use SLURM, run "sbatch mycoplasma_target.sh"
+  2) if not use SLURM, run "bash ./mycoplasma_target.sh"
 
 ## Result
 
