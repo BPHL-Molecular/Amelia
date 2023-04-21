@@ -18,8 +18,9 @@ module load apptainer
 nextflow run myco_target.nf -params-file params.yaml
 
 sort ./output/*/report.txt | uniq > ./output/sum_report.txt
+titleline=$(grep 'reference' ./output/sum_report.txt)
 sed -i '/sampleID\treference/d' ./output/sum_report.txt
-sed -i '1i sampleID\treference\tstart\tend\tnum_raw_reads\tnum_clean_reads\tnum_mapped_reads\tpercent_mapped_clean_reads\tcov_bases_mapped\tpercent_genome_cov_map\tmean_depth\tmean_base_qual\tmean_map_qual' ./output/sum_report.txt
+sed -i "1i $titleline" ./output/sum_report.txt
 
 cp ./output/*/variants/*.vcf ./output/variants/
 #cat ./output/assemblies/*.fa > ./output/assemblies.fasta
