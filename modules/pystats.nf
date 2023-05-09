@@ -69,9 +69,9 @@ process pystats {
     
     ####### function 1 #################
     def triplet(snpsite,ref,alt):
-        print(snpsite)
-        print(ref)
-        print(alt)
+        #print(snpsite)
+        #print(ref)
+        #print(alt)
         with open(genefile) as genes:
              lines = genes.readlines()
              tripletstart=[]
@@ -104,7 +104,7 @@ process pystats {
                     ### Note: subs is from VCF file which start numbering at 1. But Bio.SeIQ sequence start at 0.
                     ref_tri=fasta_seqs.seq[int(subs[0])-1]+fasta_seqs.seq[int(subs[0])]+fasta_seqs.seq[int(subs[0])+1]
                     alt_tri=""
-                    print(subs[1])
+                    #print(subs[1])
                     if int(subs[1]) == 1:
                        alt_tri = alt+fasta_seqs.seq[int(subs[0])]+fasta_seqs.seq[int(subs[0])+1]
                     if int(subs[1]) == 2:
@@ -113,8 +113,8 @@ process pystats {
                        alt_tri = fasta_seqs.seq[int(subs[0])-1]+fasta_seqs.seq[int(subs[0])]+alt
                     triplets.append(ref_tri+":"+ alt_tri) 
          
-             else:
-                print("triplet is empty")
+             #else:
+             #   print("triplet is empty")
         return triplets 
     
     ########## function 2 #############################################  
