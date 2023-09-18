@@ -18,7 +18,7 @@ process snp {
     # amplicon statistics
     singularity exec docker://staphb/samtools:1.12 samtools ampliconstats ${params.primer}/primer.bed ${mypath}/alignment/\${samplename}.sorted.bam -o ${mypath}/astats -l 10000
     
-    # intersect of reference gff file and variant (SNP) VCF filte
+    # intersect of reference gff file and variant (SNP) VCF file
     singularity exec docker://staphb/bedtools:latest bedtools intersect -a ${params.reference}/L43967.2.gff3 -b ${mypath}/variants/\${samplename}.variants.vcf -wa -u > ${mypath}/intersect 
     
     ############################################
