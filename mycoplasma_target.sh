@@ -4,7 +4,7 @@
 #SBATCH --job-name=mycoplasma_target_nf
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=25
-#SBATCH --mem=100gb
+#SBATCH --mem=150gb
 #SBATCH --output=mycoplasma_target.%j.out
 #SBATCH --error=mycoplasma_target.%j.err
 #SBATCH --time=3-00

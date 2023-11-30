@@ -1,12 +1,7 @@
 # The parameters "input", "output", "reference" and "primer" are the absolute paths. Do not include the "/" at the end of the paths.
-input          : "/blue/bphl-florida/dongyibo/Dev_mycoplasma/Version2/fastqs"
-output    : "/blue/bphl-florida/dongyibo/Dev_mycoplasma/Version2/output"
-reference      : "/blue/bphl-florida/dongyibo/Dev_mycoplasma/Version2/reference"
-primer    : "/blue/bphl-florida/dongyibo/Dev_mycoplasma/Version2/primers"
-
-# specify if input amplicons were fragmented. If yes, the parameter setting is "frag". If no, the parameter setting is "no_frag". (default: frag)
-frag : "frag"
-# comma separated list of SOTCs to screen, default as "S:L452R,S:E484K"
-sotc : "S:L452R,S:E484K"
+input          : "/blue/bphl-florida/dongyibo/Dev_mycoplasma/git2/fastqs"
+output    : "/blue/bphl-florida/dongyibo/Dev_mycoplasma/git2/output"
+reference      : "/blue/bphl-florida/dongyibo/Dev_mycoplasma/git2/reference"
+primer    : "/blue/bphl-florida/dongyibo/Dev_mycoplasma/git2/primers"
 
 
