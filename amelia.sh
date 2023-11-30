@@ -1,12 +1,12 @@
 #!/bin/bash
 #SBATCH --account=bphl-umbrella
 #SBATCH --qos=bphl-umbrella
-#SBATCH --job-name=mycoplasma_target_nf
+#SBATCH --job-name=amelia
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=25
 #SBATCH --mem=150gb
-#SBATCH --output=mycoplasma_target.%j.out
-#SBATCH --error=mycoplasma_target.%j.err
+#SBATCH --output=amelia.%j.out
+#SBATCH --error=amelia.%j.err
 #SBATCH --time=3-00
 
 
