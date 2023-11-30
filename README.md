@@ -1,7 +1,7 @@
-<h1 align="center">Mycoplasma_target</h1>
+<h1 align="center">Amelia</h1>
 
 ## What to do
-The pipeline in Nextflow workflow can be used to analyze the NGS data from Mycoplasma. The analyses include read coverage, read depth, read quality, quality control, SNP calling and related amino acid variation etc. 
+The Nextflow pipeline can be used to analyze the NGS data from Mycoplasma. The analyses include read coverage, read depth, read quality, quality control, SNP calling and related amino acid variation etc. 
 
 ## Prerequisites
 Nextflow should be installed. The detail of installation can be found in https://github.com/nextflow-io/nextflow.
@@ -18,11 +18,11 @@ Singularity/Apptainer is also needed. The detail of installation can be found in
 
    If you use SLURM, run 
    ```bash
-   sbatch mycoplasma_target.sh
+   sbatch amelia.sh
    ```
    If not use SLURM, run 
    ```bash
-   bash ./mycoplasma_target.sh
+   bash ./amelia.sh
    ```
 
 ## Result

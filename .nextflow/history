@@ -1,0 +1,1 @@
+2023-11-30 15:31:14	50.7s	stupefied_lamport	OK	a67e9ae5ba84380df814e3dd888c16d5	383661ce-8f85-4a51-8acc-03acae1a0df1	nextflow run myco_target.nf -params-file params.yaml

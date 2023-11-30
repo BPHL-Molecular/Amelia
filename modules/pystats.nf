@@ -80,7 +80,7 @@ process pystats {
              for aidx in range(0,num):
                  cells=lines[aidx].rstrip().split("\t")
                  if (cells[2] == "CDS") and (int(snpsite) >= int(cells[3])) and (int(snpsite) <= int(cells[4])):
-                    print(str(cells[4])+">="+str(snpsite)+">="+str(cells[3]))
+                    #print(str(cells[4])+">="+str(snpsite)+">="+str(cells[3]))
                     snpsite_in_cds = int(snpsite)-int(cells[3])+1
                     if cells[7]=="0":
                        tri_remainder = snpsite_in_cds % 3
@@ -114,7 +114,7 @@ process pystats {
                     triplets.append(ref_tri+":"+ alt_tri) 
          
              #else:
-             #   print("triplet is empty")
+              #  print("triplet is empty")
         return triplets 
     
     ########## function 2 #############################################  
@@ -285,9 +285,9 @@ process pystats {
 
     
     with open("${mypath}"+"/report.txt", 'w') as report:
-        header = ['sampleID', 'reference', 'start', 'end', 'num_raw_reads', 'num_clean_reads', 'num_mapped_reads', 'percent_mapped_clean_reads', 'cov_bases_mapped', 'percent_genome_cov_map', 'mean_depth', 'mean_base_qual', 'mean_map_qual']
+        header = ['sampleID', 'reference', 'start', 'end', 'num_raw_reads', 'num_clean_reads', 'num_mapped_reads', 'percent_mapped_clean_reads', 'mean_base_qual', 'mean_map_qual']
         report.write('\t'.join(map(str,header)) +'\t'+"\t".join(primers) +'\n')
-        results = [items[-1], ref_name, start, end, raw_reads, clean_reads, reads_mapped, percent_map, cov_bases, cov, depth, baseq, mapq]
+        results = [items[-1], ref_name, start, end, raw_reads, clean_reads, reads_mapped, percent_map, baseq, mapq]
         for idx in range(0,pnum):
             results.append(reads_matched[idx]+","+reads_depth[idx]+","+coverage_amp[idx]+","+str(variants[idx]))
         report.write('\t'.join(map(str,results)) + '\n')

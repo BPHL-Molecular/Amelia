@@ -1,0 +1,135 @@
+Nov-30 15:31:13.055 [main] DEBUG nextflow.cli.Launcher - $> nextflow run myco_target.nf -params-file params.yaml
+Nov-30 15:31:13.146 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 21.10.6
+Nov-30 15:31:13.250 [main] INFO  nextflow.cli.CmdRun - Launching `myco_target.nf` [stupefied_lamport] - revision: a67e9ae5ba
+Nov-30 15:31:13.265 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /blue/bphl-florida/dongyibo/Dev_mycoplasma/git2/nextflow.config
+Nov-30 15:31:13.266 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /blue/bphl-florida/dongyibo/Dev_mycoplasma/git2/nextflow.config
+Nov-30 15:31:13.326 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Nov-30 15:31:14.368 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; plugins-dir=/home/dongyibo/.nextflow/plugins
+Nov-30 15:31:14.373 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Nov-30 15:31:14.384 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Nov-30 15:31:14.386 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Nov-30 15:31:14.388 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Nov-30 15:31:14.398 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Nov-30 15:31:14.480 [main] DEBUG nextflow.Session - Session uuid: 383661ce-8f85-4a51-8acc-03acae1a0df1
+Nov-30 15:31:14.480 [main] DEBUG nextflow.Session - Run name: stupefied_lamport
+Nov-30 15:31:14.481 [main] DEBUG nextflow.Session - Executor pool size: 25
+Nov-30 15:31:14.505 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 21.10.6 build 5660
+  Created: 21-12-2021 16:55 UTC (11:55 EDT)
+  System: Linux 4.18.0-477.15.1.el8_8.x86_64
+  Runtime: Groovy 3.0.9 on OpenJDK 64-Bit Server VM 1.8.0_312-b07
+  Encoding: UTF-8 (UTF-8)
+  Process: 2503556@c0701a-s4.ufhpc [172.16.201.34]
+  CPUs: 25 - Mem: 150 GB (149.6 GB) - Swap: 0 (0)
+Nov-30 15:31:14.554 [main] DEBUG nextflow.Session - Work-dir: /blue/bphl-florida/dongyibo/Dev_mycoplasma/git2/work [lustre]
+Nov-30 15:31:14.555 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /blue/bphl-florida/dongyibo/Dev_mycoplasma/git2/bin
+Nov-30 15:31:14.565 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Nov-30 15:31:14.575 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Nov-30 15:31:14.624 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 26; maxThreads: 1000
+Nov-30 15:31:14.774 [main] DEBUG nextflow.Session - Session start invoked
+Nov-30 15:31:15.034 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Nov-30 15:31:15.649 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:fastqc` matches process fastqc
+Nov-30 15:31:15.655 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-30 15:31:15.655 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-30 15:31:15.659 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Nov-30 15:31:15.665 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=25; memory=150 GB; capacity=25; pollInterval=100ms; dumpInterval=5m
+Nov-30 15:31:15.683 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 26; maxThreads: 1000
+Nov-30 15:31:15.735 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:trimmomatic` matches process trimmomatic
+Nov-30 15:31:15.736 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-30 15:31:15.736 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-30 15:31:15.739 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:bbduk` matches process bbduk
+Nov-30 15:31:15.739 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-30 15:31:15.739 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-30 15:31:15.742 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:fastqc_clean` matches process fastqc_clean
+Nov-30 15:31:15.742 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-30 15:31:15.742 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-30 15:31:15.746 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:multiqc` matches process multiqc
+Nov-30 15:31:15.747 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-30 15:31:15.747 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-30 15:31:15.754 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:frag_bwa` matches process frag_bwa
+Nov-30 15:31:15.754 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-30 15:31:15.754 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-30 15:31:15.757 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:frag_samtools` matches process frag_samtools
+Nov-30 15:31:15.757 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-30 15:31:15.757 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-30 15:31:15.760 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:bcftools` matches process bcftools
+Nov-30 15:31:15.761 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-30 15:31:15.761 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-30 15:31:15.765 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:amplicon_stat` matches process amplicon_stat
+Nov-30 15:31:15.765 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-30 15:31:15.765 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-30 15:31:15.768 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:bedtools` matches process bedtools
+Nov-30 15:31:15.768 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-30 15:31:15.768 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-30 15:31:15.772 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-30 15:31:15.772 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-30 15:31:15.917 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: trimmomatic, amplicon_stat, frag_bwa, fastqc, bcftools, fastqc_clean, pystats, bbduk, bedtools, multiqc, frag_samtools
+Nov-30 15:31:15.919 [main] DEBUG nextflow.Session - Ignite dataflow network (12)
+Nov-30 15:31:15.919 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > fastqc
+Nov-30 15:31:15.920 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > trimmomatic
+Nov-30 15:31:15.920 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > bbduk
+Nov-30 15:31:15.921 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > fastqc_clean
+Nov-30 15:31:15.921 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > multiqc
+Nov-30 15:31:15.921 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > frag_bwa
+Nov-30 15:31:15.922 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > frag_samtools
+Nov-30 15:31:15.930 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > bcftools
+Nov-30 15:31:15.931 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > amplicon_stat
+Nov-30 15:31:15.931 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > bedtools
+Nov-30 15:31:15.932 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > pystats
+Nov-30 15:31:15.932 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Nov-30 15:31:15.933 [main] DEBUG nextflow.Session - Session await
+Nov-30 15:31:15.991 [Actor Thread 16] WARN  nextflow.container.SingularityCache - Singularity cache directory has not been defined -- Remote image will be stored in the path: /blue/bphl-florida/dongyibo/Dev_mycoplasma/git2/work/singularity -- Use env variable NXF_SINGULARITY_CACHEDIR to specify a different location
+Nov-30 15:31:15.992 [Actor Thread 16] INFO  nextflow.container.SingularityCache - Pulling Singularity image docker://staphb/fastqc:0.11.9 [cache /blue/bphl-florida/dongyibo/Dev_mycoplasma/git2/work/singularity/staphb-fastqc-0.11.9.img]
+Nov-30 15:31:17.533 [Actor Thread 16] DEBUG nextflow.container.SingularityCache - Singularity pull complete image=docker://staphb/fastqc:0.11.9 path=/blue/bphl-florida/dongyibo/Dev_mycoplasma/git2/work/singularity/staphb-fastqc-0.11.9.img
+Nov-30 15:31:17.649 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-30 15:31:17.653 [Task submitter] INFO  nextflow.Session - [3e/132a34] Submitted process > fastqc (1)
+Nov-30 15:31:25.410 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: fastqc (1); status: COMPLETED; exit: 0; error: -; workDir: /blue/bphl-florida/dongyibo/Dev_mycoplasma/git2/work/3e/132a346b1a01fd7b227cb4e3a9192b]
+Nov-30 15:31:25.423 [Actor Thread 25] INFO  nextflow.container.SingularityCache - Pulling Singularity image docker://staphb/trimmomatic:0.39 [cache /blue/bphl-florida/dongyibo/Dev_mycoplasma/git2/work/singularity/staphb-trimmomatic-0.39.img]
+Nov-30 15:31:26.453 [Actor Thread 25] DEBUG nextflow.container.SingularityCache - Singularity pull complete image=docker://staphb/trimmomatic:0.39 path=/blue/bphl-florida/dongyibo/Dev_mycoplasma/git2/work/singularity/staphb-trimmomatic-0.39.img
+Nov-30 15:31:26.468 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-30 15:31:26.468 [Task submitter] INFO  nextflow.Session - [50/4e2cd1] Submitted process > trimmomatic (1)
+Nov-30 15:31:31.512 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: trimmomatic (1); status: COMPLETED; exit: 0; error: -; workDir: /blue/bphl-florida/dongyibo/Dev_mycoplasma/git2/work/50/4e2cd1a7573e412c8bd7de65ba287e]
+Nov-30 15:31:31.521 [Actor Thread 32] INFO  nextflow.container.SingularityCache - Pulling Singularity image docker://staphb/bbtools:38.76 [cache /blue/bphl-florida/dongyibo/Dev_mycoplasma/git2/work/singularity/staphb-bbtools-38.76.img]
+Nov-30 15:31:32.901 [Actor Thread 32] DEBUG nextflow.container.SingularityCache - Singularity pull complete image=docker://staphb/bbtools:38.76 path=/blue/bphl-florida/dongyibo/Dev_mycoplasma/git2/work/singularity/staphb-bbtools-38.76.img
+Nov-30 15:31:32.915 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-30 15:31:32.916 [Task submitter] INFO  nextflow.Session - [cd/bf033c] Submitted process > bbduk (1)
+Nov-30 15:31:37.299 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: bbduk (1); status: COMPLETED; exit: 0; error: -; workDir: /blue/bphl-florida/dongyibo/Dev_mycoplasma/git2/work/cd/bf033cc53a80100e892073213932b5]
+Nov-30 15:31:37.313 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-30 15:31:37.314 [Task submitter] INFO  nextflow.Session - [77/b644d3] Submitted process > fastqc_clean (1)
+Nov-30 15:31:42.544 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: fastqc_clean (1); status: COMPLETED; exit: 0; error: -; workDir: /blue/bphl-florida/dongyibo/Dev_mycoplasma/git2/work/77/b644d32e1ccb6f4eb6107a51484fde]
+Nov-30 15:31:42.549 [Actor Thread 46] INFO  nextflow.container.SingularityCache - Pulling Singularity image docker://staphb/multiqc:1.8 [cache /blue/bphl-florida/dongyibo/Dev_mycoplasma/git2/work/singularity/staphb-multiqc-1.8.img]
+Nov-30 15:31:46.735 [Actor Thread 46] DEBUG nextflow.container.SingularityCache - Singularity pull complete image=docker://staphb/multiqc:1.8 path=/blue/bphl-florida/dongyibo/Dev_mycoplasma/git2/work/singularity/staphb-multiqc-1.8.img
+Nov-30 15:31:46.753 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-30 15:31:46.754 [Task submitter] INFO  nextflow.Session - [ef/3a29ae] Submitted process > multiqc (1)
+Nov-30 15:31:49.472 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 5; name: multiqc (1); status: COMPLETED; exit: 0; error: -; workDir: /blue/bphl-florida/dongyibo/Dev_mycoplasma/git2/work/ef/3a29aed8144fa529f2ddfdb41d41e2]
+Nov-30 15:31:49.482 [Actor Thread 46] INFO  nextflow.container.SingularityCache - Pulling Singularity image docker://staphb/bwa:0.7.17 [cache /blue/bphl-florida/dongyibo/Dev_mycoplasma/git2/work/singularity/staphb-bwa-0.7.17.img]
+Nov-30 15:31:50.167 [Actor Thread 46] DEBUG nextflow.container.SingularityCache - Singularity pull complete image=docker://staphb/bwa:0.7.17 path=/blue/bphl-florida/dongyibo/Dev_mycoplasma/git2/work/singularity/staphb-bwa-0.7.17.img
+Nov-30 15:31:50.178 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-30 15:31:50.178 [Task submitter] INFO  nextflow.Session - [26/e58c36] Submitted process > frag_bwa (1)
+Nov-30 15:31:51.904 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 6; name: frag_bwa (1); status: COMPLETED; exit: 0; error: -; workDir: /blue/bphl-florida/dongyibo/Dev_mycoplasma/git2/work/26/e58c36e99971346f946eb4781a53ed]
+Nov-30 15:31:51.909 [Actor Thread 46] INFO  nextflow.container.SingularityCache - Pulling Singularity image docker://staphb/samtools:1.12 [cache /blue/bphl-florida/dongyibo/Dev_mycoplasma/git2/work/singularity/staphb-samtools-1.12.img]
+Nov-30 15:31:52.944 [Actor Thread 46] DEBUG nextflow.container.SingularityCache - Singularity pull complete image=docker://staphb/samtools:1.12 path=/blue/bphl-florida/dongyibo/Dev_mycoplasma/git2/work/singularity/staphb-samtools-1.12.img
+Nov-30 15:31:52.956 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-30 15:31:52.956 [Task submitter] INFO  nextflow.Session - [94/80b143] Submitted process > frag_samtools (1)
+Nov-30 15:31:55.005 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 7; name: frag_samtools (1); status: COMPLETED; exit: 0; error: -; workDir: /blue/bphl-florida/dongyibo/Dev_mycoplasma/git2/work/94/80b143e01dd34460c94e393bd89bc8]
+Nov-30 15:31:55.011 [Actor Thread 46] INFO  nextflow.container.SingularityCache - Pulling Singularity image docker://staphb/bcftools:1.12 [cache /blue/bphl-florida/dongyibo/Dev_mycoplasma/git2/work/singularity/staphb-bcftools-1.12.img]
+Nov-30 15:31:55.773 [Actor Thread 46] DEBUG nextflow.container.SingularityCache - Singularity pull complete image=docker://staphb/bcftools:1.12 path=/blue/bphl-florida/dongyibo/Dev_mycoplasma/git2/work/singularity/staphb-bcftools-1.12.img
+Nov-30 15:31:55.784 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-30 15:31:55.784 [Task submitter] INFO  nextflow.Session - [30/a0bb28] Submitted process > bcftools (1)
+Nov-30 15:31:57.215 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 8; name: bcftools (1); status: COMPLETED; exit: 0; error: -; workDir: /blue/bphl-florida/dongyibo/Dev_mycoplasma/git2/work/30/a0bb2811fd006d0e6bcc5c0fb0ccbd]
+Nov-30 15:31:57.227 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-30 15:31:57.227 [Task submitter] INFO  nextflow.Session - [91/7eb645] Submitted process > amplicon_stat (1)
+Nov-30 15:31:58.652 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 9; name: amplicon_stat (1); status: COMPLETED; exit: 0; error: -; workDir: /blue/bphl-florida/dongyibo/Dev_mycoplasma/git2/work/91/7eb6454b5906e80b1e37bc13056403]
+Nov-30 15:31:58.663 [Actor Thread 46] INFO  nextflow.container.SingularityCache - Pulling Singularity image docker://staphb/bedtools:latest [cache /blue/bphl-florida/dongyibo/Dev_mycoplasma/git2/work/singularity/staphb-bedtools-latest.img]
+Nov-30 15:31:59.767 [Actor Thread 46] DEBUG nextflow.container.SingularityCache - Singularity pull complete image=docker://staphb/bedtools:latest path=/blue/bphl-florida/dongyibo/Dev_mycoplasma/git2/work/singularity/staphb-bedtools-latest.img
+Nov-30 15:31:59.777 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-30 15:31:59.778 [Task submitter] INFO  nextflow.Session - [ea/43fb30] Submitted process > bedtools (1)
+Nov-30 15:32:01.222 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 10; name: bedtools (1); status: COMPLETED; exit: 0; error: -; workDir: /blue/bphl-florida/dongyibo/Dev_mycoplasma/git2/work/ea/43fb30c58bbb72da7de35e38af5add]
+Nov-30 15:32:01.240 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-30 15:32:01.240 [Task submitter] INFO  nextflow.Session - [62/c4694d] Submitted process > pystats (1)
+Nov-30 15:32:04.453 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 11; name: pystats (1); status: COMPLETED; exit: 0; error: -; workDir: /blue/bphl-florida/dongyibo/Dev_mycoplasma/git2/work/62/c4694d0eb34c0b83a31c607c1819a6]
+Nov-30 15:32:04.455 [main] DEBUG nextflow.Session - Session await > all process finished
+Nov-30 15:32:04.554 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Nov-30 15:32:04.562 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=11; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=35.7s; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=1; peakCpus=1; peakMemory=0; ]
+Nov-30 15:32:04.666 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+Nov-30 15:32:04.682 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
