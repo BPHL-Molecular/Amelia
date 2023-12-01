@@ -1,7 +1,7 @@
 <h1 align="center">Amelia</h1>
 
 ## What to do
-The Nextflow pipeline is used to analyze the Targeted NGS of Mycoplasma genitalium. The outputs include QC, amplicon statistics, SNP calling, gene and amino acid variation, etc. 
+A Nextflow pipeline is used to analyze Targeted NGS of Mycoplasma genitalium. The outputs include QC, amplicon statistics, SNP calling, amino acid variation detection, etc. 
 
 ## Prerequisites
 Nextflow is needed. The detail of installation can be found in https://github.com/nextflow-io/nextflow.
