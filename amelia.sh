@@ -3,15 +3,18 @@
 #SBATCH --qos=bphl-umbrella
 #SBATCH --job-name=amelia
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=25
-#SBATCH --mem=150gb
+#SBATCH --cpus-per-task=20
+#SBATCH --mem=200gb
 #SBATCH --output=amelia.%j.out
 #SBATCH --error=amelia.%j.err
-#SBATCH --time=3-00
+#SBATCH --time=48:00:00
+#SBATCH --mail-user=<EMAIL>
+#SBATCH --mail-type=FAIL,END
 
-
-#module load singularity
 module load apptainer
+module load nextflow
+APPTAINER_CACHEDIR=./
+export APPTAINER_CACHEDIR
 
 
 ###### run normal pipeline
@@ -23,9 +26,14 @@ sed -i '/sampleID\treference/d' ./output/sum_report.txt
 sed -i "1i $titleline" ./output/sum_report.txt
 
 cp ./output/*/variants/*.vcf ./output/variants/
-#cat ./output/assemblies/*.fa > ./output/assemblies.fasta
-#singularity exec /apps/staphb-toolkit/containers/nextclade_2021-03-15.sif nextclade --input-fasta ./output/assemblies.fasta --output-csv ./output/nextclade_report.csv
 
+mv ./*.out ./output
+mv ./*err ./output
+
+dt=$(date "+%Y%m%d%H%M%S")
+mv ./output ./output-$dt
+
+rm -r ./work
 
 
 

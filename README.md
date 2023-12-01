@@ -1,14 +1,22 @@
 <h1 align="center">Amelia</h1>
 
 ## What to do
-The Nextflow pipeline can be used to analyze the NGS data from Mycoplasma. The analyses include read coverage, read depth, read quality, quality control, SNP calling and related amino acid variation etc. 
+The Nextflow pipeline is used to analyze the Targeted NGS of Mycoplasma genitalium. The outputs include QC, amplicon statistics, SNP calling, gene and amino acid variation, etc. 
 
 ## Prerequisites
-Nextflow should be installed. The detail of installation can be found in https://github.com/nextflow-io/nextflow.
+Nextflow is needed. The detail of installation can be found in https://github.com/nextflow-io/nextflow.
 
-Python3 is needed.
+Python3 is needed. And the pacakage "biopython" is also needed. 
 
-Singularity/Apptainer is also needed. The detail of installation can be found in https://apptainer.org/
+Singularity/Apptainer is needed. The detail of installation can be found in https://apptainer.org/
+
+## Recommended conda environment installation
+```bash
+conda create -n AMELIA -c conda-forge python=3.10 biopython
+```
+```bash
+conda activate AMELIA
+```
 
 ## How to run
 1. put your data files into directory /fastqs. Your data file's name should look like "JBS22002292_1.fastq.gz", "JBS22002292_2.fastq.gz"
